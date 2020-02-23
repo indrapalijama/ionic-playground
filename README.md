@@ -24,14 +24,14 @@ These instructions will get you a copy of the project up and running on your loc
 4.  run ionic serve --lab to test this project locally
 ```
 
-## Preparing to Release and Deployment 
+## Naming Conventions 
 
 **Boolean** fields and variables should start with is, has, can, should, etc, for example isEnabled, hasConfirmButton, canSearch, shouldFocusSearchbar.
 **Events** should be named with a past participle, for example changed, selected, itemAdded.
 **Please** name the variable to english verb only, it helps other to read the code.
 
 
-## Preparing to Release and Deployment 
+## Deployment 
 
 1.  Update the version in the package.json according to [Semantic Versioning](https://semver.org). For example, if the release contains breaking changes than major number should be bumped and others reset to 0 - from 4.1.6 to 5.0.0.
 
@@ -49,7 +49,7 @@ to deploy your application into google play or app store.
 
 ## Contributing
 
-Feel free to contribute to this project if you want, it's the first time i'm uploading my personal project to github...
+Feel free to contribute to this project if you want, just create a pull request and describe the changes :) .
 
 ## Authors
 
