@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-9>
+          <p>
+            Email :
+          </p>
+        </ion-col>
+        <ion-col col-3>
+          <p>
+            {{email}}
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-button type="submit" expand="block" color="danger" (click)="doLogout()">Log Out</ion-button>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content class="ion-padding;">
+  <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+    <div style=" height: 100%; align-items: center; justify-content: center;">
+      <ion-card style="top:100px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input type="email" formControlName="email"></ion-input>
+              </ion-item>
+              <div class="validation-errors">
+                <ng-container *ngFor="let validation of validationMessage.email">
+                  <div class="error-message" *ngIf="email.hasError(validation.type) && (email.dirty || email.touched)">
+                    <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                  </div>
+                </ng-container>
+              </div>
+              <ion-item>
+                <ion-label position="stacked">Password</ion-label>
+                <ion-input [type]="passwordType" formControlName="password">
+                </ion-input>
+                <ion-icon slot="end" [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+              </ion-item>
+              <div class="validation-errors">
+                <ng-container *ngFor="let validation of validationMessage.password">
+                  <div class="error-message"
+                    *ngIf="password.hasError(validation.type) && (password.dirty || password.touched)">
+                    <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                  </div>
+                </ng-container>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <!-- </ion-card> -->
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" expand="block" color="primary">Login</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <p class="forgotpass">
+            Forgot password?
+          </p>
+        </ion-row>
+        <!-- </ion-grid> -->
+      </ion-card>
+    </div>
+    <!-- </ion-card> -->
+  </form>
+</ion-content>
