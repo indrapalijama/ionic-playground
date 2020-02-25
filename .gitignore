@@ -102,3 +102,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Misc ionic file
+node_modules
+.tmp
+.sass-cache
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+package-log.json
